@@ -104,14 +104,14 @@ func New(params ...interface{}) *Buntstift {
 }
 
 // Error prints a red cross mark and text
-func (b *Buntstift) Error(text string) {
+func (b *Buntstift) Error(err error) {
 	Color := b.colorize(color.FgRed, color.Bold)
-	b.printf(Color, "%v %v\n", b.icons["crossMark"], text)
+	b.printf(Color, "%v %v\n", b.icons["crossMark"], err.Error())
 }
 
 // Fatal prints a red cross mark and text and causes the  program to exit
-func (b *Buntstift) Fatal(text string) {
-	b.Error(text)
+func (b *Buntstift) Fatal(err error) {
+	b.Error(err)
 	os.Exit(1)
 }
 
