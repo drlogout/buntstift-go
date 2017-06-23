@@ -109,6 +109,12 @@ func (b *Buntstift) Error(text string) {
 	b.printf(Color, "%v %v\n", b.icons["crossMark"], text)
 }
 
+// Fatal prints a red cross mark and text and causes the  program to exit
+func (b *Buntstift) Fatal(text string) {
+	b.Error(text)
+	os.Exit(1)
+}
+
 // Info prints white text
 func (b *Buntstift) Info(text string) {
 	Color := b.colorize(color.FgWhite)
