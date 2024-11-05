@@ -2,11 +2,9 @@
 
 buntstift-go makes the CLI colorful.
 
-![buntstift](https://github.com/thenativeweb/buntstift-go/raw/master/images/logo.jpg "buntstift")
-
 ## Installation
 
-    $ go get gopkg.in/thenativeweb/buntstift-go.v0
+    $ go get github.com/drlogout/buntstift-go
 
 ## Quick start
 
